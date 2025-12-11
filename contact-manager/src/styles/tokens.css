@@ -1,0 +1,85 @@
+:root{
+    --brand-blue-600: #2563EB;
+    --brand-blue-500: #2B72F0;
+    --brand-blue-400: #3AA0F8;
+    --brand-teal-400: #45C4B2;
+    --header-gradient: linear-gradient(90deg, #153f86 0%, #2563EB 40%, #45C4B2 100%);
+
+    --page-bg: #E0E7EE;
+    --app-bg:  #F3F5F8;
+    --surface:  #FFFFFF;
+    --muted-surface: #F7F9FB;
+    --table-head-bg: #F4F6F8;      
+    --border: #CBD5E1;           
+  
+    --text-900: #0F172A;          
+    --text-700: #374151;   
+    --text-500: #6B7280;  
+    --text-400: #9CA3AF;        
+  
+    --success: #16A34A;
+    --warning: #F59E0B;
+    --danger:  #EF4444;
+  
+    --btn-primary-bg: var(--brand-blue-600);
+    --btn-primary-hover: #1E4ED8;
+    --btn-primary-text: #FFFFFF;
+  
+    --btn-outline-border: #2B72F0;
+    --btn-disabled-bg: #CFD7E6;
+  
+    --input-bg: #FFFFFF;
+    --input-border: #E6EDF6;    
+    --input-placeholder: #C6D0DA;
+  
+    --space-2: 2px;
+    --space-4: 4px;
+    --space-6: 6px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-14: 14px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-120: 120px;
+
+    --font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+    --type-xxs: 12px;
+    --type-xs: 13px;
+    --type-sm: 14px;     
+    --type-base: 16px;   
+    --type-lg: 18px;    
+    --type-xl: 20px;  
+  
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+  
+  
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;    
+    --radius-lg: 12px;
+  
+    --border-width: 1px;
+  
+    --shadow-subtle: 0 1px 2px rgba(15,23,36,0.04);
+    --shadow-sm: 0 4px 8px rgba(15,23,36,0.06);
+    --shadow-md: 0 10px 24px rgba(15,23,36,0.08);
+  
+   
+    --row-height: 56px;
+    --row-divider: var(--border);
+  
+   
+    --accent-blue: #2B72F0;   
+    --accent-red: #F04438;   
+  
+   
+    --transition-fast: 160ms cubic-bezier(.2,.9,.3,1);
+    --transition-default: 200ms cubic-bezier(.2,.9,.3,1);
+  }

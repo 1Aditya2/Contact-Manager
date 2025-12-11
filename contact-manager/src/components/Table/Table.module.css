@@ -1,0 +1,309 @@
+/* ContactsTable.module.css
+   Uses tokens from src/styles/tokens.css and globals.css imported in main.tsx
+*/
+
+.tableWrap {
+    width: 100%;
+    overflow: auto;
+    border-radius: var(--radius-md);
+  }
+  
+  .caption {
+    font-size: var(--type-lg);
+    font-weight: var(--fw-semibold);
+    color: var(--text-900);
+    margin-bottom: var(--space-12);
+  }
+  
+  /* Outer container gives white surface + border like design */
+  .tableContainer {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  /* Table basics */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    /* min-width: 720px; allows horizontal scroll on small screens */
+  }
+  
+  /* HEAD */
+  .table thead th {
+    text-align: left;
+    font-weight: var(--fw-medium);
+    font-size: var(--type-sm);
+    color: var(--text-700);
+    background: var(--table-head-bg);
+    padding: var(--space-12);
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .table thead th:first-child {
+    border-top-left-radius: 6px;
+  }
+  .table thead th:last-child {
+    border-right: none;
+    border-top-right-radius: 6px;
+  }
+  
+  /* CELL SIZES */
+  .colCheckbox {
+    width: 56px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .colName { width: 220px; }
+  .colContact { width: 140px; }
+  .colEmail { width: 220px; }
+  .colAddress { width: auto; } /* fluid */
+  .colAction { width: 110px; text-align: center; }
+  
+  /* ROW */
+  .row {
+    transition: background var(--transition-fast);
+  }
+  .row:last-child{
+    border-bottom: none;
+  }
+  .row:hover {
+    background: rgba(37,99,235,0.02);
+  }
+  .rowSelected {
+    background: rgba(37,99,235,0.04);
+  }
+  
+  /* body cells */
+  .table tbody td {
+    padding: var(--space-12);
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    vertical-align: middle;
+    color: var(--text-700);
+    font-size: var(--type-sm);
+  }
+  .table tbody td:first-child {
+    border-radius: 6px;
+  }
+  .table tbody td:last-child {
+    border-right: none;
+    border-radius: 6px;
+  }
+  
+  /* primary / secondary text styling */
+  .cellPrimary {
+    color: var(--text-900);
+    font-weight: var(--fw-medium);
+  }
+  
+  .cellSecondary {
+    color: var(--text-900);
+    font-weight: var(--fw-medium);
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  /* checkbox look */
+  .checkboxLabel {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .checkboxLabel input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--brand-blue-600);
+  }
+  
+  /* action buttons */
+  .actions {
+    display:flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .actionBtn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 13px;
+    color: var(--brand-blue-600);
+    transition: background var(--transition-fast), transform var(--transition-fast);
+  }
+  
+  .actionBtn:hover {
+    background: rgba(37,99,235,0.06);
+    transform: translateY(-1px);
+  }
+  
+  .actionBtn:active { transform: translateY(0); }
+  
+  .actionLabel {
+    margin-left: 6px;
+    cursor: pointer;
+    color: var(--brand-blue-600);
+    font-weight: var(--fw-medium);
+    padding: 4px 8px;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    transition: all var(--transition-fast);
+    transform: scale(1);
+  }
+
+  .actionLabel::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--brand-blue-600);
+    transition: all var(--transition-fast);
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .actionLabel:hover {
+    color: var(--brand-blue-700);
+    transform: scale(1.05);
+    background: rgba(37, 99, 235, 0.08);
+  }
+
+  .actionLabel:hover::before {
+    width: 80%;
+  }
+
+  .actionLabel:active {
+    transform: scale(0.98);
+    background: rgba(37, 99, 235, 0.12);
+  }
+  
+  /* empty state */
+  .empty {
+    padding: var(--space-24);
+    text-align: center;
+    color: var(--text-500);
+  }
+  
+  /* Mobile Card View - Hidden by default */
+  .mobileView {
+    display: none;
+  }
+
+  /* Mobile Select All Header */
+  .mobileSelectAll {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-12);
+    margin-bottom: var(--space-12);
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .mobileSelectAllText {
+    margin-left: var(--space-8);
+    color: var(--text-700);
+    font-size: var(--type-sm);
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+  }
+
+  /* Mobile Card Styles */
+  .mobileCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-16);
+    margin-bottom: var(--space-12);
+    box-shadow: var(--shadow-subtle);
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .mobileCardSelected {
+    background: rgba(37, 99, 235, 0.04);
+    border-color: var(--brand-blue-600);
+  }
+
+  .mobileCardHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+    padding-bottom: var(--space-12);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobileCardName {
+    color: var(--text-900);
+    font-weight: var(--fw-semibold);
+    font-size: var(--type-base);
+    flex: 1;
+  }
+
+  .mobileCardBody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+  }
+
+  .mobileCardRow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .mobileCardLabel {
+    color: var(--text-700);
+    font-size: var(--type-xs);
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .mobileCardValue {
+    color: var(--text-900);
+    font-size: var(--type-sm);
+    word-break: break-word;
+  }
+
+  .mobileCardActions {
+    display: flex;
+    gap: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--border);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive: Tablet adjustments */
+  @media (max-width: 880px) {
+    .colName { width: 180px; }
+    .colEmail { width: 180px; }
+    .colContact { width: 120px; }
+    .colAction { width: 90px; }
+  }
+  
+  /* Mobile: Switch to card view */
+  @media (max-width: 768px) {
+    .tableContainer {
+      display: none;
+    }
+
+    .mobileView {
+      display: block;
+    }
+
+    .tableWrap {
+      overflow: visible;
+    }
+  }
+  

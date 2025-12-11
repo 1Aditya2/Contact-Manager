@@ -1,0 +1,140 @@
+.container {
+    position: relative;
+    width: 100%;
+    font-family: var(--font-family);
+    color: var(--text-900);
+  }
+  
+  /* control that looks like an input */
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--input-border);
+    box-shadow: var(--shadow-subtle);
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* slightly different when open */
+  .controlOpen {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* display selected text */
+  .display {
+    color: var(--text-900);
+    font-size: var(--type-sm);
+    padding-left: 4px;
+  }
+  
+  /* placeholder style */
+  .placeholder {
+    color: var(--input-placeholder);
+  }
+  
+  /* input when searchable */
+  .input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: var(--type-sm);
+    padding: 10px 6px;
+    color: var(--text-900);
+    background: transparent;
+  }
+  
+  /* right side controls (clear + chevron) */
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  
+  .clearBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-700);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  .clearBtn:hover {
+    background: rgba(0,0,0,0.04);
+  }
+  
+  /* chevron area */
+  .chev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+  }
+  
+  /* dropdown menu */
+  .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    overflow: auto;
+    z-index: 2000;
+    list-style: none;
+    padding: 8px 0;
+  }
+  
+  /* options */
+  .option {
+    padding: 14px 18px;
+    font-size: var(--type-sm);
+    color: var(--text-900);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    border-top: 1px solid var(--border);
+    background: transparent;
+  }
+  
+  /* remove top border for first visible option */
+  .option:first-child {
+    border-top: none;
+  }
+  
+  /* hover / active */
+  .optionHover,
+  .option:hover {
+    background: rgba(0,0,0,0.03);
+  }
+  
+  /* selected */
+  .optionSelected {
+    background: rgba(37,99,235,0.06);
+  }
+  
+  /* when list is empty */
+  .empty {
+    padding: 12px 18px;
+    color: var(--text-500);
+    font-size: var(--type-sm);
+  }
+  
+  /* small screens adjustments */
+  @media (max-width: 480px) {
+    .control { height: 44px; padding: 0 10px; border-radius: 8px; }
+    .menu { margin-top: 6px; }
+    .option { padding: 12px 14px; font-size: var(--type-sm); }
+  }
+  

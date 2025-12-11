@@ -1,0 +1,29 @@
+.deleteContactBody{
+    padding: var(--space-16);
+    margin-bottom: 120px;
+}
+.bottomBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-16);
+    padding-block: var(--space-16);
+    padding-inline: var(--space-20);
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+    .deleteContactBody {
+        padding: var(--space-12);
+        margin-bottom: 0;
+    }
+    .bottomBar {
+        flex-direction: column-reverse;
+        gap: var(--space-12);
+        padding-block: var(--space-12);
+        padding-inline: var(--space-16);
+    }
+    .bottomBar button {
+        width: 100%;
+    }
+}

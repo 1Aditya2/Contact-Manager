@@ -1,0 +1,39 @@
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--space-24);
+}
+.contactManagerContainer {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+@media (max-width: 768px) {
+    .contactManagerContainer {
+      width: 100%;
+    }
+  }
+.contactBody {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface);
+    padding-inline: var(--space-12);
+    padding-block: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-20);
+}
+.contactManagerHeading {
+    font-size: var(--type-xl);
+    font-weight: var(--fw-semibold);
+    line-height: 30px;
+    color: var(--text-900);
+}
+.searchAndButtonCont {
+    display: flex;justify-content: space-between;align-items: center;
+    flex-wrap: wrap;gap: var(--space-12);
+}
