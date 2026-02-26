@@ -6,7 +6,7 @@
     justify-content: center;
     background: rgba(15, 23, 36, 0.35);
     z-index: 10000;
-    padding: 24px;
+    padding: 23px;
     animation: modalFade 180ms ease;
   }
   

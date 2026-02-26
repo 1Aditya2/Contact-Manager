@@ -6,7 +6,7 @@
   }
   .gradientBar {
     width: 100%;
-    height: 60px;
+    height: 58px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
     padding-bottom: var(--space-14);
   }
   .logoWrap {
-    width: 138px;
+    width: 135px;
     height: 32px;
   }
   .logo {
@@ -31,7 +31,7 @@
       padding-right: var(--space-12);
     }
     .logo {
-      height: 30px;
+      height: 32px;
     }
     .logoText { font-size: 18px; }
   }
